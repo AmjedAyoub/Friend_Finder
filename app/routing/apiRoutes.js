@@ -20,7 +20,7 @@ module.exports = function(app) {
 
     app.get("/api/friendsList", function(req, res) {
         res.json(friendsData);
-        console.log(friendsData);
+        // console.log(friendsData);
 
     });
 

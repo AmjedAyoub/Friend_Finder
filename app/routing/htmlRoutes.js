@@ -16,7 +16,7 @@ module.exports = function(app) {
     // ---------------------------------------------------------------------------
 
     app.get("/survey", function(req, res) {
-        console.log("hi");
+        // console.log("hi");
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
