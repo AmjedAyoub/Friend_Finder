@@ -230,10 +230,7 @@
                         $("#q10").val()
                     ]
                 };
-
-                // AJAX post the data to the friends API.
-                $.post("/api/friendsList", userData, function(data) {
-                    $.ajax({
+                $.ajax({
                             url: "/api/friendsList",
                             method: "GET"
                         })
@@ -247,17 +244,22 @@
                             }
                             
                             var min = 100;
+                            var difArray=[];
                             for (let i = 0; i < Data.length; i++) {
                                 var sum = 0;
                                 for (let j = 0; j < Data[i].scores.length; j++) {
                                     sum += Math.abs((parseInt(Data[i].scores[j])));
                                 }
-                                console.log(sum+"    "+userscore+"    "+min+"   "+Math.abs((sum-userscore)));
-                                if (min > Math.abs((sum-userscore))) {
-                                    min = Math.abs((sum-userscore));
-                                    index = i;
+                                console.log(Data.length+"     "+i+"    "+sum+"    "+userscore+"    "+Math.abs((sum-userscore)));
+                                
+                                difArray.push(Math.abs((sum-userscore)));
+                            }
+                            for (let z = 0; z < difArray.length; z++) {
+                                if (min > difArray[z]) {
+                                    min = difArray[z];
+                                    index = z;
                                 }
-
+                                console.log(min);
                             }
                             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                             $("#match-name").text(Data[index].name);
@@ -265,9 +267,13 @@
                             // $("#match-img").css("width: 400px", "height: 400px");
 
                             // Show the modal with the best match
-                            $("#results-modal").modal("toggle");
+                            $("#results-modal").modal("toggle"); 
+                            $.post("/api/friendsList", userData, function(data) {
+                   
+                            });
                         });
-                });
+                // AJAX post the data to the friends API.
+               
             } else {
                 alert("Please fill out all fields before submitting!");
             }
