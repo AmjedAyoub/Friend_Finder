@@ -178,7 +178,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    <img id="match-img" src="https://cdn4.vectorstock.com/i/1000x1000/52/63/avatar-icon-with-question-mark-symbol-with-male-vector-28785263.jpg" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -239,18 +239,22 @@
                         })
                         .then(function(Data) {
                             var index;
-
+                            console.log(Data);
                             // Loop through and display each of the customers
-
+                            var userscore = 0;
+                            for (let k = 0; k < userData.scores.length; k++) {
+                                userscore += parseInt(userData.scores[k])
+                            }
+                            
                             var min = 100;
                             for (let i = 0; i < Data.length; i++) {
                                 var sum = 0;
-                                for (let j = 0; j < Data[i].scores.length - 1; j++) {
-                                    sum += Math.abs((parseInt(Data[i].scores[j]) - parseInt(userData.scores[j])));
-                                    console.log(sum);
+                                for (let j = 0; j < Data[i].scores.length; j++) {
+                                    sum += Math.abs((parseInt(Data[i].scores[j])));
                                 }
-                                if (min > sum) {
-                                    min = sum;
+                                console.log(sum+"    "+userscore+"    "+min+"   "+Math.abs((sum-userscore)));
+                                if (min > Math.abs((sum-userscore))) {
+                                    min = Math.abs((sum-userscore));
                                     index = i;
                                 }
 

@@ -175,8 +175,8 @@ var friends = [{
         ]
     },
     {
-        "name": "Hi ",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
+        "name": "Bob",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4kP9cKVsfJYvj7cxt6uBNI9dXjPTALxEpADtDsxFGRZpkdP6w",
         "scores": [
             "3",
             "3",
@@ -207,7 +207,7 @@ var friends = [{
         ]
     },
     {
-        "name": "me",
+        "name": "Anthony",
         "photo": "https://tse1.mm.bing.net/th?id=OIP.r8_kUpejOC_RWdveXIv8dQHaKW&pid=Api&P=0&w=300&h=300",
         "scores": [
             "1",
@@ -223,7 +223,7 @@ var friends = [{
         ]
     },
     {
-        "name": "giphyapp",
+        "name": "Chris",
         "photo": "https://tse1.mm.bing.net/th?id=OIP.fEstyBvbrWiYhLRPDqv55wHaHa&pid=Api&P=0&w=300&h=300",
         "scores": [
             "2",
@@ -255,7 +255,7 @@ var friends = [{
         ]
     },
     {
-        "name": "todo",
+        "name": "James",
         "photo": "http://mediamedusa.com/wp-content/uploads/2013/04/avatar.jpg",
         "scores": [
             "1",
