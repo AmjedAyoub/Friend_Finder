@@ -45,7 +45,7 @@ localhost:8080
 * Express
 
 ## Links
-This application is deployed on GitHub Pages, [Try it yourself](https://newfriend-finder.herokuapp.com/).\
+This application is deployed on Heroku, [Try it yourself](https://newfriend-finder.herokuapp.com/).\
 This application is published on [GitHub](https://github.com/AmjedAyoub/Friend_Finder).
 
 ## Authors
