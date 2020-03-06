@@ -28,13 +28,13 @@ And then open the browser at the url:
 ```url
 localhost:8080
 ``` 
-You will have the page below. To start the friend finder you have to click on the `Go To Survey` button. Then the app will take you to a survey form.
+### You will have the page below. To start the friend finder you have to click on the `Go To Survey` button. Then the app will take you to a survey form.
 ![Image](./images/1.png)
 
-The Survey form that you have to fill out.
+### The Survey form that you have to fill out.
 ![Image](./images/2.png)
 
-After submitting the form, the app will give you your matching friend.
+### After submitting the form, the app will give you your matching friend.
 ![Image](./images/3.png)
 
 
